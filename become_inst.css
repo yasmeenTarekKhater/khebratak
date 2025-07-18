@@ -1,0 +1,869 @@
+.sub-header-greenBack {
+  background: url(./assets/greenBackHeader.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sub-header-greenBack h2 {
+  font-size: 36px;
+}
+
+.sub-header-greenBack a {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 400;
+}
+
+.be-inst-watch-video-section{
+  margin-top: 140px;
+}
+
+.become-inst-video-greenBack {
+  background-color: #164F26;
+  border-radius: 30.789px;
+}
+
+.video-wrapper {
+  background: url(./assets/becomeInstractorVideoPoster.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30.876px;
+  top: 20px;
+  right: 20px;
+  height: 352px;
+}
+
+.become-inst-play-btn {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: #222;
+  border: none;
+  background-color: rgba(231, 191, 43, 0.4);
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Pulse animation */
+.become-inst-play-btn::before,
+.become-inst-play-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 207, 57, 0.40);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.8s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+
+.watch-text {
+  position: absolute;
+  bottom: 17px;
+  font-family: Playfair;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FACF39;
+}
+
+.become-inst-content-text {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    height: 100%;
+    right: 0;
+  }
+
+  .become-inst-content-text {
+    font-size: 2.5rem;
+  }
+
+  .become-inst-play-btn {
+    top: 55%;
+  }
+}
+
+/* ----------------------- second section ----------------- */
+.become-inst-content-text span {
+  color: #DAB123;
+}
+
+.become-inst-content-sub-text {
+  color: #657869;
+  font-family: "Rethink Sans";
+  font-size: 16.085px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.become-ins-learn-btn {
+  color: #0B2711;
+  font-family: "Rethink Sans";
+  font-size: 16.085px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 10.053px;
+  background: #FACF39;
+  transition: 0.3s all;
+}
+
+.become-ins-learn-btn:hover {
+  background-color: #217738;
+  ;
+  transform: scale(1.03);
+}
+
+.become-ins-learn-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.instructor-impact {
+  padding: 5rem 0;
+  background: url(./assets/yellow_Bg.svg) no-repeat;
+  background-size: cover;
+  margin-top: 140px;
+
+}
+
+
+
+.instructor-stat-card {
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.instructor-stat-icon-container {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #217738;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.instructor-stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.instructor-stat__number {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.instructor-stat__label {
+  color: #657869;
+  font-weight: 400;
+}
+
+.instructor-stat__plus {
+  vertical-align: super;
+  font-size: 1.5rem;
+  color: inherit;
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .instructor-stat__number {
+    font-size: 2.25rem;
+  }
+
+  .instructor-stat__label {
+    font-size: 1rem;
+  }
+
+  .instructor-stat-card {
+    padding: 1.75rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .instructor-impact {
+    padding: 3rem 0;
+  }
+}
+
+/* --------------- third section --------------------- */
+
+.teaching-feature-section {
+  padding: 90px 0;
+}
+
+.teaching-feature-title {
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: #0B2711;
+  font-family: "Rethink Sans";
+
+}
+
+.teaching-feature-title .highlight {
+  color: #DAB123;
+}
+
+.teaching-feature-text {
+  color: #657869;
+  margin-bottom: 3rem;
+}
+
+.teaching-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.student-management-content strong {
+  color: #0B2711;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.student-management-content div {
+  color: #657869;
+  font-weight: 400;
+}
+
+.feature-icon {
+  background-color: #FADB68;
+  color: #000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.feature-image-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.feature-image {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .feature-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .feature-text {
+    text-align: center;
+  }
+
+  .feature-image-wrapper {
+    margin-top: 30px;
+  }
+}
+
+/* --------------- fourch section --------------------- */
+.all-in-one-learning-section {
+  background-color: #217738;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.all-in-one-learning-title {
+  font-family: "Rethink Sans";
+  font-size: 2.9rem;
+  font-weight: 700;
+}
+
+.all-in-one-learning-highlight {
+  color: #FACF39;
+}
+
+.all-in-one-learning-subtext {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.all-in-one-learning-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #3c9157;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.all-in-one-learning-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  /* adjust how much of the bottom is faded */
+  background: linear-gradient(to top, rgba(91, 90, 90, 0.3), transparent);
+  pointer-events: none;
+  /* allow clicks to pass through */
+}
+
+.all-in-one-learning-image-container {
+  height: 170px;
+  overflow: hidden;
+  border-radius: 28px;
+
+}
+
+.all-in-one-learning-card>div h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.all-in-one-learning-card>div p {
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.all-in-one-learning-card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* First card hover effect */
+.all-in-one-learning-card:hover {
+  background-color: #ffe165;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.all-in-one-learning-card.hoverable:hover h5 {
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .all-in-one-learning-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* --------------- fourch section --------------------- */
+.be-instructor-faq-section {
+  padding: 120px 0;
+}
+
+.be-instructor-faq-section-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.be-instructor-faq-section-subtext {
+  color: #6c757d;
+  margin-bottom: 40px;
+}
+
+.be-instructor-faq-section .accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.be-instructor-faq-section .accordion-header {
+  background-color: white;
+}
+
+.be-instructor-faq-section .accordion-header:has(.accordion-button:not(.collapsed)) {
+  border: none;
+}
+
+.be-instructor-faq-section .accordion-header .accordion-button:not(.collapsed) {
+  border: 0 !important;
+}
+
+.be-instructor-faq-section .accordion-button {
+  font-weight: 500;
+  position: relative;
+  padding: 35px;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  box-shadow: none !important;
+}
+
+.be-instructor-faq-section .accordion-button.collapsed {
+  border-radius: 20px !important;
+}
+
+.be-instructor-faq-section .accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  /* Set actual size */
+  height: 1.25rem;
+  margin-left: auto;
+  background-image: url('./assets/plus-solid.svg') !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  /* Needed to show pseudo-element */
+  transition: transform 0.2s ease;
+  border: none;
+  font-size: 0;
+  /* Hide text space if any */
+  color: transparent;
+  /* Remove any default color */
+}
+
+.be-instructor-faq-section .accordion-button:not(.collapsed)::after {
+  background-image: url('./assets/minus-solid.svg') !important;
+}
+
+.be-instructor-faq-section .accordion-button:focus {
+  box-shadow: none;
+}
+
+.be-instructor-faq-section .accordion-item {
+  background: #FADC6C;
+  border: 1px solid #E9E9E9;
+  border-radius: 20px 20px;
+}
+
+.be-instructor-faq-section .accordion-item .accordion-button:not(.collapsed)  {
+  background: #FADC6C;
+}
+
+.be-instructor-faq-section .accordion-item .accordion-button:not(.collapsed) {
+  background:  var(--Linear, linear-gradient(180deg, #FBCF3A 0%, #FADC6C 100%));
+  color: #000;
+}
+
+.be-instructor-faq-section .faq-video-button {
+  width: fit-content;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  padding: 6px 12px;
+  font-size: 14px;
+  gap: 5px;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
+
+.be-instructor-faq-section .faq-video-button:hover {
+  background-color: #ffe165;
+  transform: scale(1.03);
+}
+
+
+.be-instructor-faq-section .faq-video-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* --------------------- fivth section --------------------- */
+
+.be-instructor-subscribe-section {
+  background-color: #F8FEEE;
+  /* Fallback color */
+  overflow: hidden;
+  min-height: 400px;
+  border-radius: 57.857px;
+
+}
+
+.be-instructor-subscribe-bg {
+  background-image: url('./assets/subscribeNow_Bg.png');
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  /* Adjust as needed */
+  z-index: 0;
+}
+
+.be-instructor-subscribe-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.be-instructor-subscribe-highlight {
+  color: #DAB123;
+}
+
+.be-instructor-subscribe-desc {
+  color: #657869;
+  font-family: "Rethink Sans";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .be-instructor-subscribe-section {
+    text-align: center;
+  }
+
+  .be-instructor-subscribe-title {
+    font-size: 2.5rem;
+  }
+
+  .be-instructor-subscribe-desc {
+    font-size: 1rem;
+  }
+
+  .be-instructor-subscribe-btn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* ---------------------- six section --------------------- */
+
+.ready-be-instructor-section {
+  margin: 140px 0;
+}
+
+/* Left side image styling */
+.ready-be-instructor-left-img-col {
+  background-image: url('./assets/become-instructor-form.png'); /* Replace with left image */
+  background-size: cover;
+  background-position:top center;
+  min-height: 600px;
+}
+
+
+/* Right side form with background */
+.ready-be-instructor-form-col {
+  background-image: url(./assets/readyBecomeInstructorFormRigth-bgImg.png); /* Replace with form bg image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Form content styling */
+.ready-be-instructor-title {
+  font-family: "Rethink Sans";
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.ready-be-instructor-subtitle {
+  font-weight: 400;
+  color: white;
+}
+
+.ready-be-instructor-input,
+.ready-be-instructor-textarea,.ready-be-instructor-input-select {
+ background-color: transparent!important;
+ border-top: 0px !important;
+ border-left: 0px !important;
+ border-right: 0px !important;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+ border-radius: 0px !important;
+ color: white !important;
+ outline: none !important;
+}
+
+.ready-be-instructor-input::placeholder,
+.ready-be-instructor-textarea::placeholder,.ready-be-instructor-input-select::placeholder {
+  color: white;
+}
+
+.ready-be-instructor-input:focus,
+.ready-be-instructor-textarea:focus,.ready-be-instructor-input-select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: #DAB123 1px solid !important;
+
+}
+
+.become-ins-get-started-btn:hover{
+  background-color: #f6c823;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Select Container */
+.ready-be-instructor-select-container {
+    position: relative;
+}
+
+/* Select Wrapper */
+.ready-be-instructor-select-wrapper {
+    position: relative;
+}
+
+/* Custom Arrow */
+.ready-be-instructor-select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #f9fafc;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Arrow Focus State */
+.ready-be-instructor-input-select:focus ~ .ready-be-instructor-select-arrow {
+    border-top-color: white
+}
+
+/* Option Styling */
+.ready-be-instructor-input-select option {
+    padding: 12px!important;
+    background: white;
+    color: #212529;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ready-be-instructor-form-col {
+    padding: 2rem !important;
+  }
+  
+  .ready-be-instructor-title {
+    font-size: 1.75rem;
+  }
+  
+  .ready-be-instructor-subtitle {
+    font-size: 1rem;
+  }
+  
+  .ready-be-instructor-input,
+  .ready-be-instructor-textarea {
+    background-color: white; /* Full opaque on mobile */
+  }
+}
+
+/* ----------------------------------- last section ------------------------------------ */
+
+.instructor-reviews-title {
+  font-size: 2.9rem;
+  font-weight: 600;
+  color: #0B2711;
+}
+
+.instructor-reviews-subtitle {
+  color: #657869;
+  font-weight: 400;
+}
+
+.instructor-review-card {
+  padding: 33px;
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    perspective: 1000px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+    background: #F8F8F8;
+}
+
+.instructor-review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.reviewer-info{
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, rgba(229, 231, 235, 0.00) 0%, #E5E7EB 50%, rgba(229, 231, 235, 0.00) 100%) 1;
+}
+.reviewer-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 16px;
+}
+.reviewer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.review-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #164F26 0%, rgba(22, 79, 38, 0.00) 100%);
+    z-index: 2;
+}
+
+.review-card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.review-play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(250, 207, 57, 0.40);
+    outline: rgba(250, 208, 57, 0.208) solid 4px;
+    color: #FBCF3A;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Existing styles for front side */
+.reviewer-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.reviewer-title {
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.review-text {
+   text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #657869;
+    font-weight: 400;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  margin: 20px 0 14px 0;
+}
+
+.star-rating .star {
+  color: #ddd; /* Outline star color */
+  margin-right: 4px;
+  position: relative;
+}
+
+.star-rating .star.filled {
+  color: #ffc107; /* Filled star color */
+}
+
+.star-rating .star.half-filled::after {
+  content: '\2605'; /* Filled star */
+  color: #ffc107;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructor-review-card {
+        height: 250px;
+    }
+    
+    .review-card-front,
+    .review-card-back {
+        padding: 15px;
+    }
+}
+
+
+/* --------------------- popups ---------------------------------- */
+/* Custom modal styling */
+#reviewMediaModal .modal-content {
+  min-height: 300px;
+  border-radius: 20px;
+  padding: 33px;
+  background: white;
+  box-shadow: none;
+}
+
+#reviewMediaModal .modal-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}

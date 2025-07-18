@@ -1,0 +1,171 @@
+.sub-header-greenBack {
+  background: url(./assets/greenBackHeader.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sub-header-greenBack h2 {
+  font-size: 36px;
+}
+
+.sub-header-greenBack a {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 400;
+}
+
+.about-org-container{
+    margin:5rem 15vw 0 15vw;
+}
+
+/* Main container styling */
+.about-org-left-container,.about-instructor-section,.about-instructor-fields {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+    box-shadow: 0px 18px 54px 0px rgba(11, 39, 17, 0.10);
+}
+
+.about-org-profile-main-info{
+    padding-bottom: 30px;
+}
+
+.about-org-profile-main-info button{
+    border-radius: 10px;
+    background: #217738!important;
+    border: 0px;
+    box-shadow: none!important;
+    transition: all 0.3s ease-in-out;
+}
+.about-org-profile-main-info button:hover{
+    background: #FACF39!important;
+    transform: scale(1.03);
+}
+
+.about-org-profile-img{
+    height: 236px;
+    border-radius: 10px;
+    background: #EEE;
+    margin-bottom: 26px;
+}
+/* Profile header section */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0B2711;
+    margin-bottom: 0.25rem;
+}
+
+.profile-name  img{
+    margin-top: -2px;
+}
+
+.profile-title {
+    color: #657869;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+/* Stats section */
+.profile-stats {
+    margin-bottom: 16px;
+    gap: 0.8rem;
+}
+
+.profile-stats p {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #657869;
+}
+
+.profile-stats p span {
+    color: #217738;
+    font-weight: 500;
+}
+
+.profile-instructor-info-section {
+    margin-top: 1rem;
+}
+
+.profile-instructor-info-list {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-instructor-info-item span:first-child {
+    font-weight: 400;
+    color: #657869;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-instructor-info-item span:last-child {
+    font-weight: 600;
+    color: #164F25;
+}
+
+/* Button styling */
+.schedule-btn {
+    margin-top: 45px;
+    width: 100%;
+    padding: 12px 20;
+    background-color: #FACF39!important;
+    color: black!important;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none!important;
+}
+
+.schedule-btn svg{
+    margin-bottom: 1px;
+}
+
+.schedule-btn:hover {
+    background-color: #217738!important;
+    transform: scale(1.03);
+    color: black!important;
+
+}
+
+.about-org-right-container{
+    gap: 40px;
+}
+
+.about-instructor-title ,.about-instructor-fields-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0B2711;
+}
+
+.about-instructor-experience strong{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0B2711;
+}
+
+.about-instructor-experience{
+    color:#657869;
+}
+
+.about-instructor-readmore{
+    color: #217738;
+    font-weight: 700;
+}
+
+.about-instructor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.about-instructor-tag {
+    background-color: #F9F9F9;
+    color: #657869;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}

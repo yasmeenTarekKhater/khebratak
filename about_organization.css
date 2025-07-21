@@ -16,7 +16,14 @@
 
 /* ---------------- left side ------------------------- */
 .about-org-container{
-    margin:5rem 13vw 0 13vw;
+    margin:5rem 12vw 0 12vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-org-container{
+        margin:5rem 6vw 0 6vw;
+    }
+    
 }
 
 /* Main container styling */
@@ -267,6 +274,12 @@ padding: 7px 14px;
 .about-instructor-readmore{
     color: #217738;
     font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.about-instructor-readmore:hover{
+    color: #52c370;
+    font-weight: 700;
 }
 
 .about-instructor-tags {
@@ -349,14 +362,14 @@ padding: 7px 14px;
 
 
 /* ---------- my servives -------------------- */
-.services-tabs {
+.services-tabs,.organization-tabs {
     display: flex;
     margin-bottom: 1.25rem;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.services-tab-btn,.services-tab-btn-review {
+.services-tab-btn,.services-tab-btn-review ,.organization-tab-btn-resources{
     padding: 10px 20px;
     border: none;
     background-color: #EEEEEE;
@@ -367,20 +380,20 @@ padding: 7px 14px;
     transition: all 0.3s ease;
 }
 
-.services-tab-btn:hover ,.services-tab-btn-review:hover {
+.services-tab-btn:hover ,.services-tab-btn-review:hover,.organization-tab-btn-resources:hover {
     background-color: #e5e6de;
 }
 
-.services-tab-btn.active ,.services-tab-btn-review.active {
+.services-tab-btn.active ,.services-tab-btn-review.active ,.organization-tab-btn-resources.active{
     color: #fff;
     background-color: #FACF39;
 }
 
-.services-content {
+.services-content ,.organization-resources-content {
     display: none;
 }
 
-.services-content.active {
+.services-content.active,.organization-resources-content.active {
     display: block;
 }
 
@@ -439,11 +452,10 @@ padding: 7px 14px;
 }
 
 @media (max-width: 768px) {
-    .services-tabs {
+    .services-tabs,.organization-tabs {
         justify-content: flex-start;
-        overflow-x: auto;
         padding-bottom: 0.5rem;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .services-tab-btn {
@@ -577,12 +589,12 @@ padding: 7px 14px;
 }
 
 .star-rating .star.filled {
-  color: #ffc107; /* Filled star color */
+  color: #FACF39; /* Filled star color */
 }
 
 .star-rating .star.half-filled::after {
   content: '\2605'; /* Filled star */
-  color: #ffc107;
+  color: #FACF39;
   position: absolute;
   left: 0;
   width: 50%;
@@ -626,3 +638,79 @@ padding: 7px 14px;
 /* --------------------------------------------------------------------------------- common review secton end --------------------------- */
 
 /* ---------------------------- Organization Resources (last) --------------------- */
+
+.organization-resources-section{
+    margin-top: 100px;
+}
+
+.organization-resources-header h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0B2711;
+    margin-bottom: 30px;
+}
+
+.organization-resources-header{
+    margin-bottom: 50px;
+}
+
+.organization-resources-content{
+    background: url(./assets2/organization-resourses-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 60px ;
+    min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .organization-resources-content{
+        padding: 30px ;
+    }
+    
+}
+
+.organization-resources-content>div{
+    gap: 24px;
+}
+
+.organization-resources-courses-card {
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+}
+
+.organization-resources-courses-card img{
+    border-radius: 10px;
+    height: 220px;
+}
+
+.organization-resources-courses-card:hover {
+  transform: translateY(-5px);
+}
+
+.organization-resources-courses-title {
+    color: #0B2711;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.organization-resources-courses-author {
+  font-size: 1rem;
+  color: #657869;
+  font-weight: 500;
+}
+
+.organization-resources-courses-price span {
+  font-size: 1.3rem;
+}
+.organization-resources-courses-price span:first-child {
+    color: #217738;
+    font-weight: 600;
+}
+.organization-resources-courses-price span:last-child {
+  color: #657869;
+  font-weight: 500;
+}

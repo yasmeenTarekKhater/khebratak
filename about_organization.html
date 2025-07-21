@@ -28,7 +28,7 @@
 
     <section class="about-org-container row justify-content-between">
         <!-- ----------- left ----------------- -->
-        <div class="col-4">
+        <div class="col-12 col-lg-4">
             <div class="about-org-left-container d-flex flex-column">
                 <div class="about-org-profile-card card">
                     <div class="card-body border-0 p-0">
@@ -187,7 +187,7 @@
 
                 </div>
 
-                <div class="contact-info-card">
+                <div class="contact-info-card mb-5">
                     <h3 class="about-instructor-video-audio-title">Contact Info</h3>
                     <div class="contact-info-card-options d-flex flex-wrap gap-2">
                         <a href="#" class="contact-info-card-option">
@@ -205,19 +205,18 @@
         </div>
 
         <!-- ----------- right ----------------- -->
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <div class="about-org-right-container d-flex flex-column gap-3">
                 <!-- About Instructor Section -->
                 <div class="about-instructor-section card">
                     <div class="card-body p-0 d-flex flex-column gap-4">
                         <h2 class="about-instructor-title m-0">About</h2>
                         <div class="about-instructor-content">
-                            <p class="about-instructor-experience">
-                                <strong>Professional Experience :</strong> Youssef Atek is a seasoned Digital Marketing
-                                Strategist with 5 years of experience in crafting data-driven marketing campaigns and growth
-                                strategies. He has worked with top brands and businesses, helping them optimize their online
-                                presence, increase engagement, and drive conversions. As an instructor, Youssef brings
-                                real-world expertise to practical... <a href="#" class="about-instructor-readmore">Read more</a>
+                            <p class="about-instructor-experience" id="experiencePara"
+                                data-fulltext="Youssef Atek is a seasoned Digital Marketing Strategist with 5 years of experience in crafting data-driven marketing campaigns and growth strategies. He has worked with top brands and businesses, helping them optimize their online presence, increase engagement, and drive conversions. As an instructor, Youssef brings real-world expertise to practical...">
+                                <strong>Professional Experience :</strong>
+                                <span id="experienceText"></span>
+                                <a href="#" class="about-instructor-readmore" id="readMoreBtn">Read more</a>
                             </p>
                         </div>
                     </div>
@@ -239,7 +238,7 @@
                 </div>
 
                 <!-- ------------- certification and awards section ------------ -->
-                <div class="row">
+                <div class="row gy-3">
                 <!-- Certificates Card -->
                 <div class="col-lg-6">
                     <div class="about-instructor-certificates">
@@ -509,12 +508,98 @@
                         </div>
                 </div>
 
-                <!-- -------------------- Organization Resources (last) --------------------- -->
-
             </div>
         </div>
         
     </section>
+
+    <!-- -------------------- Organization Resources (last) --------------------- -->
+    <div class="organization-resources-section">
+        <div class="organization-resources-header">
+            <h2 class="text-center">Organization Resources</h2>
+            <div class="organization-tabs justify-content-center">
+                <button class="organization-tab-btn-resources active" data-tab="courses">Courses</button>
+                <button class="organization-tab-btn-resources" data-tab="instructors">Instructors</button>
+                <button class="organization-tab-btn-resources" data-tab="meetings">Reserve a Meeting</button>
+            </div>
+        </div>
+        
+        <div class="organization-resources-content active" id="courses">
+            <div class="container-fluid container-lg d-flex flex-wrap justify-content-center">
+                <!-- ----- card 1 ----- -->
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----- card 2 ----- -->
+
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----- card 3 ----- -->
+
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="organization-resources-content" id="instructors">
+            instructors
+        </div>
+        <div class="organization-resources-content" id="meetings">
+            meetings
+        </div>
+    </div>
 
 
     <!-- Modal Structure -->
@@ -618,10 +703,11 @@
         }
 
 
-        // ----------------- services / reviews  tabs ---------------
+        // ----------------- services / reviews /resources  tabs ---------------
 
         const tabServicesButtons = document.querySelectorAll('.services-tab-btn');
         const tabReviewButtons = document.querySelectorAll('.services-tab-btn-review');
+        const tabResourcesButtons = document.querySelectorAll('.organization-tab-btn-resources');
 
         tabServicesButtons.forEach(button => {
             button.addEventListener('click', function () {
@@ -661,6 +747,25 @@
             });
         });
 
+        
+        tabResourcesButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                tabResourcesButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all content
+                document.querySelectorAll('.organization-resources-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show the corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
         // -------------------------- start rating -------------------
 
         const starContainers = document.querySelectorAll('.star-rating');
@@ -721,6 +826,34 @@
             }
         });
 
+
+        // ------------------ read more  -----------------------
+        const para = document.getElementById("experiencePara");
+            const fullText = para.getAttribute("data-fulltext");
+            const textSpan = document.getElementById("experienceText");
+            const readMoreBtn = document.getElementById("readMoreBtn");
+            const charLimit = 200;
+
+            let isExpanded = false;
+
+            function updateText() {
+                if (isExpanded) {
+                    textSpan.textContent = fullText;
+                    readMoreBtn.textContent = "Read less";
+                } else {
+                    textSpan.textContent = fullText.slice(0, charLimit) + "...";
+                    readMoreBtn.textContent = "Read more";
+                }
+            }
+
+            readMoreBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                isExpanded = !isExpanded;
+                updateText();
+            });
+
+            // Initialize
+            updateText();
 
     </script>
 

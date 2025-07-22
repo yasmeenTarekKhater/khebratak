@@ -54,6 +54,7 @@
 .about-org-profile-main-info button:hover{
     background: #FACF39!important;
     transform: scale(1.03);
+    color: black;
 }
 
 .about-org-profile-img{
@@ -140,8 +141,11 @@
 .schedule-btn:hover {
     background-color: #217738!important;
     transform: scale(1.03);
-    color: black!important;
+    color: white!important;
+}
 
+.schedule-btn:hover svg path{
+    stroke: white!important;
 }
 
 .about-instructor-badges {

@@ -36,40 +36,83 @@
                 <!-- Main slider -->
                 <div class="product-main-slider swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">one</div>
-                        <div class="swiper-slide">two</div>
-                        <div class="swiper-slide">
-                            <div class="video-thumbnail">three
-                                <div class="play-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product1.jpg" 
+                                    alt="product img 1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product2.jpg" 
+                                    alt="product img 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide position-relative">
+                                <div class="video-thumbnail">
+                                    <video src="https://khebratak.b-cdn.net/uploads/thumbnail_video/1749579365XIPLkChhvJ.mp4" controls
+                                        type="video/mp4" width="100%"></video>
+                                    <div class="play-icon-swiper-video-overlay-content d-flex flex-column align-items-center justify-content-center">
+                                        <div class="play-icon-swiper-video">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#164F25">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </div>
+                                        <div class="watch-text text-center w-100">Watch The Video</div>
+                                    </div>
+                            
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product1.jpg" 
+                                    alt="product img 1" class="img-fluid"></div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product2.jpg" 
+                                    alt="product img 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product3.jpg" 
+                                    alt="product img 1" class="img-fluid">
+                            </div>
                         </div>
-                        <div class="swiper-slide">four</div>
-                        <div class="swiper-slide">five</div>
-                        <div class="swiper-slide">sex</div>
-                    </div>
                     <div class="swiper-button-next main-next"></div>
                     <div class="swiper-button-prev main-prev"></div>
                 </div>
                 
                 <!-- Thumbnail slider -->
-                <div class="product-thumbnail-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">one</div>
-                        <div class="swiper-slide">two</div>
-                        <div class="swiper-slide">
-                            <div class="video-thumbnail">three</div>
+                <div class="product-thumbnail-slider-container position-relative mx-3">
+                    <div class="product-thumbnail-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets3/product1.jpg" 
+                                     alt="product img 1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product2.jpg" 
+                                     alt="product img 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide d-flex justify-content-center align-items-center">
+                                <div class="video-thumbnail">
+                                        <div class="play-icon-swiper-video-overlay d-flex justify-content-center align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#164F25">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </div>                            
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product1.jpg" 
+                                    alt="product img 1" class="img-fluid"></div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product2.jpg" 
+                                     alt="product img 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets3/product3.jpg" 
+                                     alt="product img 1" class="img-fluid">
+                            </div>
                         </div>
-                        <div class="swiper-slide">four</div>
-                        <div class="swiper-slide">five</div>
-                        <div class="swiper-slide">sex</div>
                     </div>
+                    <!-- Navigation buttons OUTSIDE the slider container -->
+                    <div class="swiper-pagination thumb-pagination product-details-bottom-pagination"></div>
                     <div class="swiper-button-next thumb-next"></div>
                     <div class="swiper-button-prev thumb-prev"></div>
-                    <div class="swiper-pagination thumb-pagination"></div>
                 </div>
             </div>
 
@@ -168,7 +211,29 @@
                 swiper: thumbnailSlider,
             },
         });
-        
+
+
+
+        // --------------- video play ----------------
+
+        // Use each() to handle multiple video slides independently
+        $('.video-thumbnail').each(function () {
+            const $thumbnail = $(this);
+            const $overlay = $thumbnail.find('.play-icon-swiper-video-overlay-content');
+            const $video = $thumbnail.find('video');
+
+            // Play video and hide overlay on play icon click
+            $overlay.find('.play-icon-swiper-video').on('click', function (e) {
+                e.preventDefault();
+                $overlay.css('display', 'none'); // Force hide
+                $video[0].play();
+            });
+
+            // Show overlay again when video is paused or ended
+            $video.on('pause ended', function () {
+                $overlay.css('display', 'flex'); // Force show as flex
+            });
+        });
     </script>
 
 </body>

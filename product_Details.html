@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="product_details.css"/>
+    <title>Product Details</title>
+</head>
+<body>
+
+    <!-- ------ Header ------- -->
+    <div class="container-fluid bg-success text-white">
+        <div class="row sub-header-greenBack">
+            <div class="col-12 d-flex justify-content-center py-5">
+                <div class="text-center d-flex flex-column gap-1 pb-2">
+                    <h2 class="mb-0">Product Details</h2>
+                    <div>
+                        <a href="#">Home</a> /
+                        <a href="#">Product Details</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ----------------- first section -------------- -->
+        
+        <div class="product-details-media-container row">
+            <!-- -------- right (media) ----------- -->
+            <div class="product-details-media-right col-12 col-lg-8">
+                <!-- Main slider -->
+                <div class="product-main-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">one</div>
+                        <div class="swiper-slide">two</div>
+                        <div class="swiper-slide">
+                            <div class="video-thumbnail">three
+                                <div class="play-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">four</div>
+                        <div class="swiper-slide">five</div>
+                    </div>
+                    <div class="swiper-button-next main-next"></div>
+                    <div class="swiper-button-prev main-prev"></div>
+                </div>
+                
+                <!-- Thumbnail slider -->
+                <div class="product-thumbnail-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">one</div>
+                        <div class="swiper-slide">two</div>
+                        <div class="swiper-slide">
+                            <div class="video-thumbnail">three</div>
+                        </div>
+                        <div class="swiper-slide">four</div>
+                        <div class="swiper-slide">five</div>
+                    </div>
+                    <div class="swiper-button-next thumb-next"></div>
+                    <div class="swiper-button-prev thumb-prev"></div>
+                    <div class="swiper-pagination thumb-pagination"></div>
+                </div>
+            </div>
+
+            <!-- ----------- left (info) ----------- -->
+            <div class="product-details-media-left col-12 col-lg-4">
+                <div class="product-info-section">
+                    <h2 class="product-title">Celebrate the Forest Book</h2>
+                    <p class="product-subtitle">Digital Product Book</p>
+                    
+                    <div class="product-price">
+                        $45.90 <span class="product-old-price">$86.90</span>
+                    </div>
+                    
+                    <div class="product-rating">
+                        ★★★★★ (42 reviews)
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>You are free to:</p>
+                        <ul class="product-features-list">
+                            <li>Give it away or sell it</li>
+                            <li>Brand it as your own</li>
+                            <li>Repurpose into other formats</li>
+                            <li>Adjust and edit anything</li>
+                            <li>Brand it as your own</li>
+                            <li>Give it away or sell it</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-specs">
+                        <div class="product-spec-item">
+                            <span class="product-spec-label">Pages:</span>
+                            <span>250 Page</span>
+                        </div>
+                        <div class="product-spec-item">
+                            <span class="product-spec-label">Words:</span>
+                            <span>5000 word</span>
+                        </div>
+                        <div class="product-spec-item">
+                            <span class="product-spec-label">Size:</span>
+                            <span>5.0 MB</span>
+                        </div>
+                        <div class="product-spec-item">
+                            <span class="product-spec-label">File Type:</span>
+                            <span>ZIP</span>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart-btn">Add to cart →</button>
+                </div>
+            </div>
+        </div>
+
+
+    
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    
+    <script src="https://kit.fontawesome.com/253b27cc50.js" crossorigin="anonymous"></script>
+    <script>
+         // Initialize thumbnail slider
+        const thumbnailSlider = new Swiper('.product-thumbnail-slider', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: '.thumb-next',
+                prevEl: '.thumb-prev',
+            },
+            pagination: {
+                el: '.thumb-pagination',
+                clickable: true,
+            },
+        });
+
+        // Initialize main product slider
+        const mainSlider = new Swiper('.product-main-slider', {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.main-next',
+                prevEl: '.main-prev',
+            },
+            pagination: {
+                el: '.main-pagination',
+                clickable: true,
+            },
+            thumbs: {
+                swiper: thumbnailSlider,
+            },
+        });
+        
+    </script>
+
+</body>
+</html>

@@ -154,35 +154,13 @@
                         <!-- Play/Pause Button -->
                         <button id="audioPlayPauseBtn" width="36" height="36"
                             class="btn rounded-circle p-2 d-flex align-items-center justify-content-center">
-                            <svg id="audioIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#164F25"
-                                class="bi bi-play-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4.5 12V4a.5.5 0 0 1 .733-.441l6.363 3.692a.5.5 0 0 1 0 .846z" />
-                            </svg>
+                            <span class="audio-icon">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
                         </button>
-                    
-                        <!-- Hidden Audio Player -->
-                        <audio id="aboutInstructorAudio" src="./assets2//birds-chirping.mp3"></audio>
-                    
-                        <!-- Waveform Bars -->
-                        <div class="about-instructor-audio-wave flex-grow-1">
-                            <div class="d-flex align-items-center gap-1">
-                                <!-- Animated Bars -->
-                                <div class="bar rounded-pill" data-index="0" style="height: 20px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="1" style="height: 30px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="2" style="height: 15px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="3" style="height: 18px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="4" style="height: 10px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="5" style="height: 10px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="6" style="height: 40px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="7" style="height: 10px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="8" style="height: 17px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="9" style="height: 10px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="10" style="height: 10px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="11" style="height: 30px; width: 4px;"></div>
-                                <div class="bar rounded-pill" data-index="12" style="height: 10px; width: 4px;"></div>
-                            </div>
-                        </div>
+
+                        <!-- Waveform Container -->
+                        <div id="audioWaveform" class="audioWaveform-wrap" data-audio-src="https://khebratak.b-cdn.net/uploads/user/1751888122Fr7iTgDlIR.mp3"></div>
                     </div>
 
                 </div>
@@ -315,7 +293,19 @@
                                             </div>
                                         </div>
                                         <div class="service-card-record">
-                                            record here
+                                            <!-- Audio Section -->
+                                            <div class="about-instructor-left-side-audio audio-wrapper-container  d-flex align-items-center gap-3">
+                                                <!-- Play/Pause Button -->
+                                                <button id="audioPlayPauseBtnService" width="36" height="36"
+                                                    class="btn rounded-circle p-2 d-flex align-items-center justify-content-center">
+                                                    <span class="audio-icon">
+                                                        <i class="fa-solid fa-play"></i>
+                                                    </span>
+                                                </button>
+
+                                                <!-- Waveform Container -->
+                                                <div id="audioWaveformService" class="audioWaveform-wrap" data-audio-src="https://khebratak.b-cdn.net/uploads/user/1751888122Fr7iTgDlIR.mp3"></div>
+                                            </div>
                                         </div>
                                         <button class="btn btn-primary btn-buy border-0 outline-0">Buy Service <svg xmlns="http://www.w3.org/2000/svg"
                                                 width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -466,8 +456,18 @@
                                         <div class="star-rating" data-rating="3">
                                             <!-- Stars will be inserted here by JavaScript -->
                                         </div>
-                                        <div class="review-content text-center">
-                                            record here
+                                         <!-- Audio Section -->
+                                        <div class="about-instructor-left-side-audio audio-wrapper-container  d-flex align-items-center gap-3">
+                                            <!-- Play/Pause Button -->
+                                            <button id="audioPlayPauseBtnReview" width="36" height="36"
+                                                class="btn rounded-circle p-2 d-flex align-items-center justify-content-center">
+                                                <span class="audio-icon">
+                                                    <i class="fa-solid fa-play"></i>
+                                                </span>
+                                            </button>
+
+                                            <!-- Waveform Container -->
+                                            <div id="audioWaveformReview" class="audioWaveform-wrap" data-audio-src="https://khebratak.b-cdn.net/uploads/user/1751888122Fr7iTgDlIR.mp3"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -626,8 +626,11 @@
         </div>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    
+    <script src="https://kit.fontawesome.com/253b27cc50.js" crossorigin="anonymous"></script>
     <script>
         const video = document.getElementById("instructorVideo");
         const playBtn = document.getElementById("playPauseBtnAboutInstructor");
@@ -650,58 +653,43 @@
 
         // --------------------------- audio ----------------------------------
 
-        const audio = document.getElementById("aboutInstructorAudio");
-        const playPauseBtn = document.getElementById("audioPlayPauseBtn");
-        const icon = document.getElementById("audioIcon");
-        const wave = document.querySelector(".about-instructor-audio-wave");
-        const bars = wave.querySelectorAll(".bar");
+        // Helper to initialize each waveform and play button
+        function initWaveSurfer(waveformId, playBtnId) {
+            const $audioElement = $("#" + waveformId);
+            const $audioPlayBtn = $("#" + playBtnId);
+            const $playIcon = $audioPlayBtn.find("i");
+            const audioSrc = $audioElement.data("audio-src");
 
-        playPauseBtn.addEventListener("click", function () {
-            if (audio.paused) {
-                audio.play();
-                icon.setAttribute("class", "bi bi-pause-fill");
-                icon.innerHTML = `
-          <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-1.5 1.5H5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h.5zM10.5 3.5A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-1.5 1.5H10a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h.5z" />
-        `;
-            } else {
-                audio.pause();
-                resetBars();
-                icon.setAttribute("class", "bi bi-play-fill");
-                icon.innerHTML = `
-          <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4.5 12V4a.5.5 0 0 1 .733-.441l6.363 3.692a.5.5 0 0 1 0 .846z" />
-        `;
-            }
-        });
+            const wavesurfer = WaveSurfer.create({
+                container: $audioElement[0],
+                waveColor: "#CFCFCF",
+                progressColor: "#217738",
+                barWidth: 4,
+                barRadius: 4,
+                responsive: true,
+                height: 42,
+                url: audioSrc,
+            });
 
-        audio.addEventListener("ended", function () {
-            resetBars();
-            icon.setAttribute("class", "bi bi-play-fill");
-            icon.innerHTML = `
-        <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4.5 12V4a.5.5 0 0 1 .733-.441l6.363 3.692a.5.5 0 0 1 0 .846z" />
-      `;
-        });
-
-        // Fill bars based on audio progress
-        audio.addEventListener("timeupdate", function () {
-            const percent = audio.currentTime / audio.duration;
-            const totalBars = bars.length;
-            const activeBars = Math.floor(percent * totalBars);
-
-            bars.forEach((bar, index) => {
-                if (index < activeBars) {
-                    bar.style.backgroundColor = "#28a745"; // green
+            $audioPlayBtn.on("click", function () {
+                wavesurfer.playPause();
+                if (wavesurfer.isPlaying()) {
+                    $playIcon.removeClass("fa-play").addClass("fa-pause");
                 } else {
-                    bar.style.backgroundColor = "#ccc"; // gray
+                    $playIcon.removeClass("fa-pause").addClass("fa-play");
                 }
             });
-        });
 
-        function resetBars() {
-            bars.forEach(bar => {
-                bar.style.backgroundColor = "#ccc";
+            wavesurfer.on("finish", function () {
+                $playIcon.removeClass("fa-pause").addClass("fa-play");
+                wavesurfer.stop();
             });
         }
 
+        // Initialize all three
+        initWaveSurfer("audioWaveform", "audioPlayPauseBtn");
+        initWaveSurfer("audioWaveformService", "audioPlayPauseBtnService");
+        initWaveSurfer("audioWaveformReview", "audioPlayPauseBtnReview");
 
         // ----------------- services / reviews /resources  tabs ---------------
 

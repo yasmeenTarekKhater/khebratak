@@ -30,9 +30,9 @@
 
     <!-- ----------------- first section -------------- -->
         
-        <div class="product-details-media-container row">
+        <div class="product-details-media-container row justify-content-center ">
             <!-- -------- right (media) ----------- -->
-            <div class="product-details-media-right col-12 col-lg-8">
+            <div class="product-details-media-right col-12 col-md-11 col-lg-8">
                 <!-- Main slider -->
                 <div class="product-main-slider swiper">
                     <div class="swiper-wrapper">
@@ -46,10 +46,10 @@
                             </div>
                             <div class="swiper-slide position-relative">
                                 <div class="video-thumbnail">
-                                    <video src="https://khebratak.b-cdn.net/uploads/thumbnail_video/1749579365XIPLkChhvJ.mp4" controls
+                                    <video src="https://khebratak.b-cdn.net/uploads/thumbnail_video/1749579365XIPLkChhvJ.mp4"
                                         type="video/mp4" width="100%"></video>
-                                    <div class="play-icon-swiper-video-overlay-content d-flex flex-column align-items-center justify-content-center">
-                                        <div class="play-icon-swiper-video">
+                                    <div class="play-icon-swiper-video-overlay-content">
+                                        <div class="play-icon-swiper-video mx-auto">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#164F25">
                                                 <path d="M8 5v14l11-7z" />
                                             </svg>
@@ -76,7 +76,7 @@
                 </div>
                 
                 <!-- Thumbnail slider -->
-                <div class="product-thumbnail-slider-container position-relative mx-3">
+                <div class="product-thumbnail-slider-container position-relative mx-4">
                     <div class="product-thumbnail-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -117,18 +117,23 @@
             </div>
 
             <!-- ----------- left (info) ----------- -->
-            <div class="product-details-media-left col-12 col-lg-4">
+            <div class="product-details-media-left col-12 col-md-11 col-lg-4 mt-5 mt-lg-0">
                 <div class="product-info-section">
                     <h2 class="product-title">Celebrate the Forest Book</h2>
-                    <p class="product-subtitle">Digital Product Book</p>
+                    <div class="product-subtitles d-flex flex-wrap gap-2">
+                        <span>Digital Product</span>
+                        <span>Book</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="product-price">
+                            $45.90 <span class="product-old-price">$86.90</span>
+                        </div>
                     
-                    <div class="product-price">
-                        $45.90 <span class="product-old-price">$86.90</span>
+                        <div class="product-rating">
+                            ★ <span>4.8</span> <span>(42 reviews)</span>
+                        </div>
                     </div>
                     
-                    <div class="product-rating">
-                        ★★★★★ (42 reviews)
-                    </div>
                     
                     <div class="product-description">
                         <p>You are free to:</p>
@@ -142,21 +147,31 @@
                         </ul>
                     </div>
                     
-                    <div class="product-specs">
-                        <div class="product-spec-item">
-                            <span class="product-spec-label">Pages:</span>
+                    <div class="product-specs row gap-4">
+                        <div class="product-spec-item col">
+                            <span class="product-spec-label d-flex gap-2">
+                                <img src="./assets3/mi_book.svg" alt="Pages Icon" class="product-spec-icon">
+                                Pages
+                            </span>
                             <span>250 Page</span>
                         </div>
-                        <div class="product-spec-item">
-                            <span class="product-spec-label">Words:</span>
+                        <div class="product-spec-item col">
+                            <span class="product-spec-label d-flex gap-2">
+                                <img src="./assets3/fa-regular_file-word.svg" alt="Words Icon" class="product-spec-icon">
+                                Words</span>
                             <span>5000 word</span>
                         </div>
-                        <div class="product-spec-item">
-                            <span class="product-spec-label">Size:</span>
+                        <div class="product-spec-item col">
+                            <span class="product-spec-label d-flex gap-2">
+                                <img src="./assets3/fluent_table-resize-row-28-regular.svg" alt="Size Icon" class="product-spec-icon">
+                                Size
+                            </span>
                             <span>5.0 MB</span>
                         </div>
-                        <div class="product-spec-item">
-                            <span class="product-spec-label">File Type:</span>
+                        <div class="product-spec-item col">
+                            <span class="product-spec-label d-flex gap-2">
+                                <img src="./assets3/ph_file-zip-fill.svg" alt="File Type Icon" class="product-spec-icon">
+                                File Type</span>
                             <span>ZIP</span>
                         </div>
                     </div>
@@ -227,11 +242,14 @@
                 e.preventDefault();
                 $overlay.css('display', 'none'); // Force hide
                 $video[0].play();
+                $video[0].controls = true; // Show video controls
             });
 
             // Show overlay again when video is paused or ended
             $video.on('pause ended', function () {
                 $overlay.css('display', 'flex'); // Force show as flex
+                $overlay.css('flex-direction', 'column'); // Force show as flex
+                $video[0].controls = false; // Hide video controls
             });
         });
     </script>

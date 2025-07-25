@@ -257,9 +257,223 @@
         </div>
     </div>
 
+    <!-- ----------------- six section (Reviews) -------------- -->
+    <div class="product-details-reviews-container d-flex flex-column gap-3 ">
+        <div class="product-details-reviews px-5">
+            <h3 class="product-details-reviews-title">Reviews (22) </h3>
+            <div class="row g-4 justify-content-center">
+                <!-- First card  text -->
+                <div class="col-12 col-md-4">
+                    <div class="instructor-review-card h-100">
+                        <div class="reviewer-info text-center">
+                            <div class="reviewer-image">
+                                <img src="./assets/user.png" alt="Instructor 1">
+                            </div>
+                            <h3 class="reviewer-name">Agenda Related</h3>
+                            <p class="reviewer-title">Data Science Specialist</p>
+                        </div>
+                        <div class="star-rating" data-rating="3">
+                            <!-- Stars will be inserted here by JavaScript -->
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "TheBeauty has given me the tools and support I need to create engaging courses and reach a
+                                global audience. I'm proud to be an instructor here!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second card video -->
+                <div class="col-12 col-md-4">
+                    <div class="instructor-review-card h-100">
+                        <div class="review-card-bg" style="background-image: url('./assets/reviewee.png')"></div>
+                        <div class="review-card-overlay"></div>
+                        <div class="review-card-bottom d-flex justify-content-between algin-items-center">
+                            <div>
+                                <h3 class="reviewer-name text-white">Agenda Related</h3>
+                                <p class="reviewer-title text-white">Data Science Specialist</p>
+                            </div>
+            
+                            <button id="playPauseBtnReview"
+                                class="btn review-play-btn border-0 shadow d-flex justify-content-center" data-bs-toggle="modal"
+                                data-bs-target="#reviewMediaModal" data-media-type="video"
+                                data-media-src="https://khebratak.b-cdn.net/uploads/thumbnail_video/1749579365XIPLkChhvJ.mp4">
+                                <img src="./assets/runVideoBtn.svg" alt="Play button" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Third card img -->
+                <div class="col-12 col-md-4">
+                    <div class="instructor-review-card h-100">
+                        <div class="review-card-bg" style="background-image: url('./assets/chatReview.png')"></div>
+                        <div class="review-card-overlay"></div>
+                        <div class="review-card-bottom d-flex justify-content-between algin-items-center">
+                            <div>
+                                <h3 class="reviewer-name text-white">Agenda Related</h3>
+                                <p class="reviewer-title text-white">Data Science Specialist</p>
+                            </div>
+            
+                            <button id="playPauseBtnReview"
+                                class="btn review-play-btn border-0 shadow d-flex justify-content-center" data-bs-toggle="modal"
+                                data-bs-target="#reviewMediaModal" data-media-type="image" data-media-src="./assets/chatReview.png">
+                                <img src="./assets/viewPopupButton.svg" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Fourth card voice -->
+                <div class="col-12 col-md-4">
+                    <div class="instructor-review-card h-100">
+                        <div class="reviewer-info text-center">
+                            <div class="reviewer-image">
+                                <img src="./assets/user.png" alt="Instructor 1">
+                            </div>
+                            <h3 class="reviewer-name">Agenda Related</h3>
+                            <p class="reviewer-title">Data Science Specialist</p>
+                        </div>
+                        <div class="star-rating" data-rating="3">
+                            <!-- Stars will be inserted here by JavaScript -->
+                        </div>
+                        <!-- Audio Section -->
+                        <div class="about-instructor-left-side-audio audio-wrapper-container  d-flex align-items-center gap-3">
+                            <!-- Play/Pause Button -->
+                            <button id="audioPlayPauseBtnReview" width="36" height="36"
+                                class="btn rounded-circle p-2 d-flex align-items-center justify-content-center">
+                                <span class="audio-icon">
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </button>
+            
+                            <!-- Waveform Container -->
+                            <div id="audioWaveformReview" class="audioWaveform-wrap"
+                                data-audio-src="https://khebratak.b-cdn.net/uploads/user/1751888122Fr7iTgDlIR.mp3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-end mt-4">
+            <button class="see-more-reviews-product-dwtails">see more <i class="fa fa-arrow-right mr-2"></i></button>
+        </div>
+    </div>
+
+
+    <!-- ---------------------- last section -------------------------- -->
+
+    <div class="organization-resources-section">
+        <div class="organization-resources-header">
+            <h2 class="text-center">Related Product</h2>
+            <div class="organization-tabs justify-content-center text-center">
+                <button class="organization-tab-btn-resources active" data-tab="courses">Books</button>
+                <button class="organization-tab-btn-resources" data-tab="instructors">Instructors</button>
+                <button class="organization-tab-btn-resources" data-tab="meetings">Reserve a Meeting</button>
+            </div>
+        </div>
+        
+        <div class="organization-resources-content active" id="courses">
+            <div class="container-fluid container-lg d-flex flex-wrap justify-content-center">
+                <!-- ----- card 1 ----- -->
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----- card 2 ----- -->
+
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----- card 3 ----- -->
+
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="organization-resources-courses-card h-100">
+                        <img src="./assets2/african-american-it-employee.png" class="img-fluid mb-3 w-100" alt="Course Image">
+                        <h5 class="organization-resources-courses-title px-2 mb-2">
+                            Network Security & Firewalls: Protecting IT Infrastructure
+                        </h5>
+                        <p class="organization-resources-courses-author mb-2 px-2">
+                            Alex Anderson &nbsp;|&nbsp; Awards Certified
+                        </p>
+                        <div class="organization-resources-courses-rating mb-2 px-2 d-flex align-items-center">
+                            <span class="text-dark fw-semibold me-2">4.9</span>
+                            <div class="star-rating m-0" data-rating="3.5"></div>
+                            <span>(1250)</span>
+                        </div>
+                        <div class="organization-resources-courses-price d-flex px-2 mb-3 align-items-center">
+                            <span class="me-2">$45.90</span>
+                            <span class="text-decoration-line-through">$86.90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="organization-resources-content" id="instructors">
+            instructors
+        </div>
+        <div class="organization-resources-content" id="meetings">
+            meetings
+        </div>
+    </div>
 
     
+    <!-- Modal Structure -->
+    <div class="modal fade" id="reviewMediaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 ">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-4 px-0 pb-0">
+                    <!-- Video Player (initially hidden) -->
+                    <div id="videoContainer" class="embed-responsive embed-responsive-16by9 d-none w-100">
+                        <video id="reviewVideo" class="embed-responsive-item w-100" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
 
+                    <!-- Image Container (initially hidden) -->
+                    <div id="imageContainer" class="d-none text-center">
+                        <img id="reviewImage" src="" class="img-fluid rounded" alt="Review content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
 
@@ -328,6 +542,128 @@
                 $video[0].controls = false; // Hide video controls
             });
         });
+
+        // -------------------------- start rating -------------------
+
+        const starContainers = document.querySelectorAll('.star-rating');
+
+        starContainers.forEach(container => {
+                const rating = parseFloat(container.getAttribute('data-rating')) || 0;
+                const starsTotal = 5;
+                let starsHTML = '';
+
+                for (let i = 1; i <= starsTotal; i++) {
+                    if (i <= Math.floor(rating)) {
+                        // Full star
+                        starsHTML += '<span class="star filled">&#9733;</span>';
+                    } else if (i - 0.5 <= rating) {
+                        // Half star
+                        starsHTML += '<span class="star half-filled">&#9734;</span>';
+                    } else {
+                        // Outline star
+                        starsHTML += '<span class="star">&#9734;</span>';
+                    }
+                }
+
+                container.innerHTML = starsHTML;
+        });
+
+        // ------------------ reviews modal image and video ----------------------------
+
+        const modal = document.getElementById('reviewMediaModal');
+
+        modal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const mediaType = button.getAttribute('data-media-type');
+            const mediaSrc = button.getAttribute('data-media-src');
+
+            const videoContainer = document.getElementById('videoContainer');
+            const videoElement = document.getElementById('reviewVideo');
+            const imageContainer = document.getElementById('imageContainer');
+            const imageElement = document.getElementById('reviewImage');
+
+            // Hide both containers first
+            videoContainer.classList.add('d-none');
+            imageContainer.classList.add('d-none');
+
+            if (mediaType === 'video') {
+                videoElement.src = mediaSrc;
+                videoContainer.classList.remove('d-none');
+            } else if (mediaType === 'image') {
+                imageElement.src = mediaSrc;
+                imageContainer.classList.remove('d-none');
+            }
+        });
+
+        // Pause video when modal closes
+        modal.addEventListener('hidden.bs.modal', function () {
+            const videoElement = document.getElementById('reviewVideo');
+            if (videoElement) {
+                videoElement.pause();
+                videoElement.currentTime = 0;
+            }
+        });
+
+
+        // Helper to initialize each waveform and play button
+        function initWaveSurfer(waveformId, playBtnId) {
+            const $audioElement = $("#" + waveformId);
+            const $audioPlayBtn = $("#" + playBtnId);
+            const $playIcon = $audioPlayBtn.find("i");
+            const audioSrc = $audioElement.data("audio-src");
+
+            const wavesurfer = WaveSurfer.create({
+                container: $audioElement[0],
+                waveColor: "#CFCFCF",
+                progressColor: "#217738",
+                barWidth: 4,
+                barRadius: 4,
+                responsive: true,
+                height: 42,
+                url: audioSrc,
+            });
+
+            $audioPlayBtn.on("click", function () {
+                wavesurfer.playPause();
+                if (wavesurfer.isPlaying()) {
+                    $playIcon.removeClass("fa-play").addClass("fa-pause");
+                } else {
+                    $playIcon.removeClass("fa-pause").addClass("fa-play");
+                }
+            });
+
+            wavesurfer.on("finish", function () {
+                $playIcon.removeClass("fa-pause").addClass("fa-play");
+                wavesurfer.stop();
+            });
+        }
+
+        initWaveSurfer("audioWaveformReview", "audioPlayPauseBtnReview");
+
+
+
+        const tabResourcesButtons = document.querySelectorAll('.organization-tab-btn-resources');
+
+
+        tabResourcesButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                tabResourcesButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all content
+                document.querySelectorAll('.organization-resources-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show the corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
     </script>
 
 </body>

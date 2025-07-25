@@ -21,7 +21,7 @@
 }
 
 .product-details-description-container,.product-details-addtional-info-container,
-.product-details-shipping-container,.product-details-author-container {
+.product-details-shipping-container,.product-details-author-container,.product-details-reviews-container {
     display: flex;
     margin: 0rem 11vw 0 11vw;
 }
@@ -31,7 +31,7 @@
 }
 @media screen and (max-width: 1200px) {
     .product-details-media-container,.product-details-description-container,.product-details-addtional-info-container,
-    .product-details-shipping-container,.product-details-author-container {
+    .product-details-shipping-container,.product-details-author-container,.product-details-reviews-container {
         margin: 0rem 3vw 0 3vw;
     }
     .product-details-media-container{
@@ -522,4 +522,385 @@ font-weight: 400;
 .product-details-author-container .author-btn:hover {
     background-color: #217738;
     color: white;
+}
+
+/* ------------------------- six section (Reviews) -------------- */
+.product-details-reviews-container{
+    margin-bottom: 120px;
+}
+.product-details-reviews-title{
+    color: #0B2711;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------------- common review secton --------------------------- */
+.instructor-review-card {
+  padding: 33px;
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    perspective: 1000px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+    background: #F8F8F8;
+}
+
+.instructor-review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.reviewer-info{
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, rgba(229, 231, 235, 0.00) 0%, #E5E7EB 50%, rgba(229, 231, 235, 0.00) 100%) 1;
+}
+.reviewer-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 16px;
+}
+.reviewer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.review-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #164F26 0%, rgba(22, 79, 38, 0.00) 100%);
+    z-index: 2;
+}
+
+.review-card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.review-play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(250, 207, 57, 0.40);
+    outline: rgba(250, 208, 57, 0.208) solid 4px;
+    color: #FBCF3A;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Existing styles for front side */
+.reviewer-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.reviewer-title {
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.review-text {
+   text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #657869;
+    font-weight: 400;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  margin: 20px 0 14px 0;
+}
+
+.star-rating .star {
+  color: #ddd; /* Outline star color */
+  margin-right: 4px;
+  position: relative;
+}
+
+.star-rating .star.filled {
+  color: #FACF39; /* Filled star color */
+}
+
+.star-rating .star.half-filled::after {
+  content: '\2605'; /* Filled star */
+  color: #FACF39;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructor-review-card {
+        height: 250px;
+    }
+    
+    .review-card-front,
+    .review-card-back {
+        padding: 15px;
+    }
+}
+
+
+/* --------------------- popups ---------------------------------- */
+/* Custom modal styling */
+#reviewMediaModal .modal-content {
+  min-height: 300px;
+  border-radius: 20px;
+  padding: 33px;
+  background: white;
+  box-shadow: none;
+}
+
+#reviewMediaModal .modal-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+/* ----------------------- record desgine ------------------- */
+.about-instructor-left-side-audio button{
+    background-color: #ffffff!important;
+    width: 38px!important;
+    height: 36px!important;
+    box-shadow: none!important;
+}
+
+.audioWaveform-wrap {
+    width: 100%;
+    height: 48px; /* or any value you prefer */
+    min-width: 120px;
+}
+
+.about-instructor-left-side-audio button .audio-icon{
+    position: relative;
+    width: 21px;
+    height: 21px;
+    background-color: #f1da86;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    color: #217738;
+}
+
+.about-instructor-left-side-audio button .audio-icon::before {
+    content: "";
+    animation: pulse 3s infinite 0.5s ease-out;
+    position: absolute;
+    height: 128%;
+    width: 128%;
+    background: #facf39;
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-instructor-left-side-audio button .audio-icon::after {
+    content: "";
+    animation: pulse 2s infinite ease-in-out;
+    position: absolute;
+    height: 156%;
+    width: 156%;
+    background: #facf39;
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(.6);
+    opacity: .7;
+  }
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.about-instructor-left-side-audio{
+    padding: 10px 15px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.audio-wrapper-container{
+    padding: 7px 15px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ---------------------------- Organization Resources (last) --------------------- */
+
+.organization-resources-section{
+    margin-top: 100px;
+}
+
+.organization-resources-header h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0B2711;
+    margin-bottom: 30px;
+}
+
+.organization-resources-header{
+    margin-bottom: 50px;
+}
+
+.organization-resources-content{
+    background: url(./assets2/organization-resourses-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 60px ;
+    min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .organization-resources-content{
+        padding: 30px ;
+    }
+    
+}
+
+.organization-resources-content>div{
+    gap: 24px;
+}
+
+.organization-resources-courses-card {
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+}
+
+.organization-resources-courses-card img{
+    border-radius: 10px;
+    height: 220px;
+}
+
+.organization-resources-courses-card:hover {
+  transform: translateY(-5px);
+}
+
+.organization-resources-courses-title {
+    color: #0B2711;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.organization-resources-courses-author {
+  font-size: 1rem;
+  color: #657869;
+  font-weight: 500;
+}
+
+.organization-resources-courses-price span {
+  font-size: 1.3rem;
+}
+.organization-resources-courses-price span:first-child {
+    color: #217738;
+    font-weight: 600;
+}
+.organization-resources-courses-price span:last-child {
+  color: #657869;
+  font-weight: 500;
+}
+
+.organization-tab-btn-resources{
+    padding: 10px 20px;
+    border: none;
+    background-color: #EEEEEE;
+    color: #0B2711;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.organization-tab-btn-resources:hover {
+    background-color: #e5e6de;
+}
+
+.organization-tab-btn-resources.active{
+    color: #fff;
+    background-color: #FACF39;
+}
+.organization-resources-content {
+    display: none;
+}
+
+.services-content.active,.organization-resources-content.active {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------------- common review secton end --------------------------- */
+
+.see-more-reviews-product-dwtails{
+    border-radius: 10px;
+    background: #EEE;
+    padding: 12px 20px;
+    border: none!important;
+}
+
+.see-more-reviews-product-dwtails:hover{
+    background: #cac8c8;
 }

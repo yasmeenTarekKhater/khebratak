@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="pricing_page.css"/>
+    <title>Pricing Page</title>
+</head>
+<body>
+
+    <!-- ------ Header ------- -->
+    <div class="container-fluid bg-success text-white">
+        <div class="row sub-header-greenBack">
+            <div class="col-12 d-flex justify-content-center py-5">
+                <div class="text-center d-flex flex-column gap-1 pb-2">
+                    <h2 class="mb-0">Pricing Page</h2>
+                    <div class="mt-1">
+                        <a href="#">Home</a> /
+                        <a href="#">Pricing Page</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------ Turn Your Expertise into Income --------------- -->
+    <div class="turn-expertise-income-container d-flex justify-content-between align-items-center flex-wrap px-5">
+        <div class="col-12 col-lg-6 turn-expertise-income-content d-flex flex-column position-relative">
+            <h1 class="turn-expertise-income-title">Turn Your Expertise into Income</h1>
+            <p class="turn-expertise-income-subtitle">start and pick your plan, and access all the tools you need to grow and earn as an instructor.</p>
+            <button class="turn-income-expertise-btn btn d-flex align-items-center justify-content-center gap-1">
+                <span class="mb-1">Learn More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M7.16211 16.028H24.8268" stroke="white" stroke-width="2.27117" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.9941 7.19644L24.8265 16.0288L15.9941 24.8611" stroke="white" stroke-width="2.27117"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <img src="./assets4/Arrow 2.svg" width="150" alt="Arrow Image" class="turn-income-expertise-arrow position-absolute">
+        </div>
+        <div class="col-12 col-lg-6 turn-expertise-income-image text-end">
+            <img src="https://via.placeholder.com/500" alt="Turn Your Expertise into Income Image" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- ------------------ A simple promotional video -------------------- -->
+    <div class="simple-promotional-video-container d-flex justify-content-center align-items-center flex-column my-5">
+        <h2 class="text-center text-dark mb-3 simple-promotional-video-title">
+                    A simple
+                    <span class="become-inst-content-text-span d-inline-block justify-content-center align-items-center">
+                        promotional
+                        <img src="./assets/yellow_line.svg" class="d-block mt-1" width="270" alt="arrow right icon">
+                    </span>
+                    video
+        </h2>
+        <p class="text-center simple-promotional-video-subtitle">
+            "Start Your Journey as a Professional Instructor and Share Your Knowledge with the World!"
+        </p>
+
+        <div class="position-relative simple-promotional-video-greenBack col-12">
+            <div class="video-wrapperr position-relative">
+            <div class="position-relative  overflow-hidden shadow video-wrapper">
+                <video preload="none" playsinline id="promoVideo" class="w-100 rounded-4">
+                    <source src="https://khebratak.b-cdn.net/uploads/thumbnail_video/1749579365XIPLkChhvJ.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="playPauseBtn" class="btn simple-promotional-play-btn shadow d-flex justify-content-center">
+                    <img src="./assets/runVideoBtn.svg" />
+                </button>
+                <div class="watch-text text-center w-100">Watch The Video</div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    
+    <script src="https://kit.fontawesome.com/253b27cc50.js" crossorigin="anonymous"></script>
+
+    <script>
+        // ---------------------------------- video player second section -------------------------------
+        const video = document.getElementById('promoVideo');
+        const playBtn = document.getElementById('playPauseBtn');
+        const playText = document.querySelector('.watch-text');
+
+        // When user clicks the play button
+        playBtn.addEventListener('click', () => {
+            video.play();
+            video.setAttribute('controls', 'controls');
+            playBtn.classList.add('d-none');
+            playText.style.display = 'none';
+        });
+
+        // When video is paused (either by user or programmatically)
+        video.addEventListener('pause', () => {
+            video.removeAttribute('controls');
+            playBtn.classList.remove('d-none');
+            playText.style.display = 'block';
+        });
+    </script>
+   
+
+</body>
+</html>

@@ -414,7 +414,8 @@ padding: 12px 20px;
 }
 
 .who-is-it-for-cards-container .who-card {
-  background: #fff;
+  border: 1px solid #E9E9E9;
+  background: #F9F9F9;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
@@ -480,4 +481,126 @@ transform: translateX(-50%);
 
 .who-is-it-for-cards-container .who-card:hover button svg path{
     stroke: white;
+}
+
+/* -- ---------------------Quick Comparison of available plans. -------------------------  */
+.quick-comparison-container{
+    margin: 140px 8vw 140px 8vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+    background: #FFF;
+    padding: 36px 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .quick-comparison-container{
+        margin: 140px 3vw 140px 3vw;
+    }
+    
+}
+
+.quick-comparison-title {
+    color: #0B2711;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.quick-comparison-title span {
+    color: #DAB123;
+}
+@media screen and (max-width: 768px) {
+    .quick-comparison-title {
+        font-size: 2rem;
+    }
+}
+
+.quick-comparison-container .card{
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    background: #F9F9F9;
+    padding: 32px;
+}
+
+.quick-comparison-container .card .badge {
+    background: #FACF39;
+    color: #0B2711;
+    font-weight: 400;
+    padding: 10px 16px;
+    border-radius: 20px;
+    display: flex;
+    width: fit-content;
+    margin-bottom: 16px;
+    min-width: 80px;
+}
+
+.quick-comparison-container .card .pro-badge {
+    background-color: #1F993E;
+    color: white;
+    font-weight: 600;
+    font-family: "Rethink Sans";
+
+}
+
+.pro-card{
+    background: #217738!important;
+}
+
+.quick-comparison-container .card h2 {
+    font-size: 3rem;
+    color: #0B2711;
+    font-weight: 600;
+}
+.quick-comparison-container .pro-card h2 {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .quick-comparison-container .card h2 {
+        font-size: 2rem;
+    }
+    
+}
+
+.quick-comparison-container .card p {
+    color: #657869;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.quick-comparison-container .pro-card p {
+    color: white;
+}
+
+.quick-comparison-container .card .subscribe-btn{
+  background: #EEEEEE;
+  color: #657869;
+  padding: 10px 20px;
+  font-weight: 500;
+  box-shadow: none!important;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.quick-comparison-container .pro-card .subscribe-btn {
+  background: #FACF39;
+  color: #000;
+}
+
+.quick-comparison-container .card .subscribe-btn:hover {
+  background: #FACF39;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(250, 207, 57, 0.15);
+  transition: background 0.2s, color 0.2s;
+}
+
+.quick-comparison-container .pro-card .subscribe-btn:hover {
+  background: #1F993E;
+  color: white;
+  box-shadow: 0 2px 8px rgba(101, 120, 105, 0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.quick-comparison-container .table>:not(caption)>*>*{
+    border: 0!important;
 }

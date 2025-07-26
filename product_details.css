@@ -896,11 +896,12 @@ font-weight: 400;
 
 .see-more-reviews-product-dwtails{
     border-radius: 10px;
-    background: #EEE;
+    background: #EEE!important;
     padding: 12px 20px;
     border: none!important;
 }
 
 .see-more-reviews-product-dwtails:hover{
-    background: #cac8c8;
+    background: #adadad!important;
+    color: white!important;
 }

@@ -510,7 +510,8 @@ transform: translateX(-50%);
 }
 @media screen and (max-width: 768px) {
     .quick-comparison-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
     }
 }
 
@@ -603,4 +604,420 @@ transform: translateX(-50%);
 
 .quick-comparison-container .table>:not(caption)>*>*{
     border: 0!important;
+}
+
+.quick-comparison-table th{
+color: #0B2711;
+font-weight: 500;
+font-size: 17px;
+}
+.quick-comparison-table td{
+color: #657869;
+font-weight: 400;
+}
+
+.quick-comparison-table .table>:not(caption)>*>*{
+  padding: 15px!important;
+}
+
+.quick-comparison-table .table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #ffffffde !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.quick-comparison-table .table-striped>tbody>tr:nth-of-type(odd) th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.quick-comparison-table .table-striped>tbody>tr:nth-of-type(odd) td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+/* ----------------------- Pricing Reviews Section ----------------------- */
+.pricing-reviews-title{
+    color: #0B2711;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.pricing-reviews-container {
+    margin: 140px 8vw 140px 8vw;
+}
+@media screen and (max-width: 768px) {
+    .pricing-reviews-container {
+        margin: 140px 3vw 140px 3vw;
+    }
+}
+
+/* --------------------------------------------------------------------------------- common review secton --------------------------- */
+.instructor-review-card {
+  padding: 33px;
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    perspective: 1000px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+    background: #F8F8F8;
+}
+
+.instructor-review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.reviewer-info{
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, rgba(229, 231, 235, 0.00) 0%, #E5E7EB 50%, rgba(229, 231, 235, 0.00) 100%) 1;
+}
+.reviewer-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 16px;
+}
+.reviewer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.review-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #164F26 0%, rgba(22, 79, 38, 0.00) 100%);
+    z-index: 2;
+}
+
+.review-card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.review-play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(250, 207, 57, 0.40);
+    outline: rgba(250, 208, 57, 0.208) solid 4px;
+    color: #FBCF3A;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Existing styles for front side */
+.reviewer-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.reviewer-title {
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.review-text {
+   text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #657869;
+    font-weight: 400;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  margin: 20px 0 14px 0;
+}
+
+.star-rating .star {
+  color: #ddd; /* Outline star color */
+  margin-right: 4px;
+  position: relative;
+}
+
+.star-rating .star.filled {
+  color: #FACF39; /* Filled star color */
+}
+
+.star-rating .star.half-filled::after {
+  content: '\2605'; /* Filled star */
+  color: #FACF39;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instructor-review-card {
+        height: 250px;
+    }
+    
+    .review-card-front,
+    .review-card-back {
+        padding: 15px;
+    }
+}
+
+
+/* --------------------- popups ---------------------------------- */
+/* Custom modal styling */
+#reviewMediaModal .modal-content {
+  min-height: 300px;
+  border-radius: 20px;
+  padding: 33px;
+  background: white;
+  box-shadow: none;
+}
+
+#reviewMediaModal .modal-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+
+/* ----------------------- record desgine ------------------- */
+.about-instructor-left-side-audio button{
+    background-color: #ffffff!important;
+    width: 38px!important;
+    height: 36px!important;
+    box-shadow: none!important;
+}
+
+.audioWaveform-wrap {
+    width: 100%;
+    height: 48px; /* or any value you prefer */
+    min-width: 120px;
+}
+
+.about-instructor-left-side-audio button .audio-icon{
+    position: relative;
+    width: 21px;
+    height: 21px;
+    background-color: #f1da86;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    color: #217738;
+}
+
+.about-instructor-left-side-audio button .audio-icon::before {
+    content: "";
+    animation: pulse 3s infinite 0.5s ease-out;
+    position: absolute;
+    height: 128%;
+    width: 128%;
+    background: #facf39;
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-instructor-left-side-audio button .audio-icon::after {
+    content: "";
+    animation: pulse 2s infinite ease-in-out;
+    position: absolute;
+    height: 156%;
+    width: 156%;
+    background: #facf39;
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(.6);
+    opacity: .7;
+  }
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.about-instructor-left-side-audio{
+    padding: 10px 15px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.audio-wrapper-container{
+    padding: 7px 15px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------------- common review secton end --------------------------- */
+
+/* -------------- common question section --------------------------- */
+.be-instructor-faq-section .accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.be-instructor-faq-section .accordion-header {
+  background-color: white;
+}
+
+.be-instructor-faq-section .accordion-header:has(.accordion-button:not(.collapsed)) {
+  border: none;
+}
+
+.be-instructor-faq-section .accordion-header .accordion-button:not(.collapsed) {
+  border: 0 !important;
+}
+
+.be-instructor-faq-section .accordion-button {
+  font-weight: 500;
+  position: relative;
+  padding: 35px;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  box-shadow: none !important;
+}
+
+.be-instructor-faq-section .accordion-button.collapsed {
+  border-radius: 20px !important;
+}
+
+.be-instructor-faq-section .accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  /* Set actual size */
+  height: 1.25rem;
+  margin-left: auto;
+  background-image: url('./assets/plus-solid.svg') !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  /* Needed to show pseudo-element */
+  transition: transform 0.2s ease;
+  border: none;
+  font-size: 0;
+  /* Hide text space if any */
+  color: transparent;
+  /* Remove any default color */
+}
+
+.be-instructor-faq-section .accordion-button:not(.collapsed)::after {
+  background-image: url('./assets/minus-solid.svg') !important;
+}
+
+.be-instructor-faq-section .accordion-button:focus {
+  box-shadow: none;
+}
+
+.be-instructor-faq-section .accordion-item {
+  background: #FADC6C;
+  border: 1px solid #E9E9E9;
+  border-radius: 20px 20px;
+}
+
+.be-instructor-faq-section .accordion-item .accordion-button:not(.collapsed)  {
+  background: #FADC6C;
+}
+
+.be-instructor-faq-section .accordion-item .accordion-button:not(.collapsed) {
+  background:  var(--Linear, linear-gradient(180deg, #FBCF3A 0%, #FADC6C 100%));
+  color: #000;
+}
+
+.be-instructor-faq-section .faq-video-button {
+  width: fit-content;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  padding: 6px 12px;
+  font-size: 14px;
+  gap: 5px;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
+
+.be-instructor-faq-section .faq-video-button:hover {
+  background-color: #ffe165;
+  transform: scale(1.03);
+}
+
+
+.be-instructor-faq-section .faq-video-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ------------------ ----------------- common question section end --------------------------- */
+
+.be-instructor-faq-section {
+  margin: 140px 8vw 140px 8vw;
+}
+@media screen and (max-width: 768px) {
+  .be-instructor-faq-section {
+    margin: 140px 3vw 140px 3vw;
+  }
+  
 }

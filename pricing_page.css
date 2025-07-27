@@ -1021,3 +1021,124 @@ font-weight: 400;
   }
   
 }
+
+/* ------------------------ subscribe with no risk section ------------------- */
+
+.subscribe-with-no-risk-container{
+    margin: 140px 8vw 140px 8vw;
+    background: linear-gradient(90deg, #003C0D 5.82%, #217738 100%);
+    border-radius: 20px;
+}
+
+.subscribe-with-no-risk-container h2{
+    color: #FFF !important;
+    font-size: 3rem;
+    font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+    .subscribe-with-no-risk-container{
+        margin: 140px 3vw 140px 3vw;
+    }
+}
+
+.subscribe-with-no-risk-subtitle{
+  color: white;
+  font-weight: 600;
+}
+
+
+/* ------------------------ Are you feeling hesitant about getting started? ------------------- */
+
+.feel-hesitant-container{
+  background-color: #F8F8F8;
+  padding: 80px 8vw;
+}
+
+.feel-hesitant-container h1, .feel-hesitant-container p{
+  color: #0B2711;
+}
+
+.feel-hesitant-container h1{
+  margin-bottom: 32px;
+}
+.feel-hesitant-container button{
+  color: #0B2711!important;
+}
+
+@media screen and (max-width: 768px) {
+ .feel-hesitant-container{
+  padding: 80px 3vw;
+}
+  
+}
+
+.feel-hesitant-start-btn{
+  background: #FACF39;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 16px;
+  box-shadow: none!important;
+  transition: all 0.3s ease-in-out;
+}
+.feel-hesitant-start-btn:hover{
+  background: #217738;
+  color: white !important;;
+}
+.feel-hesitant-start-btn:hover svg path{
+  stroke: white;
+}
+
+.feel-hesitant-right .contact-card {
+  display: flex;
+  align-items: center;
+    flex-wrap: wrap;
+
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.feel-hesitant-right .email-card {
+  border-radius: 10px;
+background: #FACF39;
+padding: 27px;
+}
+
+.feel-hesitant-right .whatsapp-card {
+  border-radius: 10px;
+background:  #154129;
+padding: 27px;
+}
+
+.feel-hesitant-right .contact-icon {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feel-hesitant-right .contact-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.feel-hesitant-right .contact-info {
+  text-align: left;
+}
+
+.feel-hesitant-right .contact-label {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0B2711;
+}
+
+.feel-hesitant-right .whatsapp-card .contact-label {
+  color: #ccc;
+}
+
+.feel-hesitant-right .contact-text {
+  margin: 0;
+  font-weight: 500;
+  color: #0B2711;
+}

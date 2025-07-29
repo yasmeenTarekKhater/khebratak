@@ -403,8 +403,10 @@ padding: 12px 20px;
 /* ------------------- what-you-get-section ---------------------- */
 
 .what-you-get-container{
-    height: 800px;
-    background-color: #003C0D;
+    /* height: 800px; */
+    background:url(./assets4/what-you-get-containeBG.png) no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 140px 0vw 140px 0vw;
 }
 .what-you-get-content{

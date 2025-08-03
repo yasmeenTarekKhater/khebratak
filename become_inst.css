@@ -186,9 +186,10 @@
 }
 
 .instructor-stat__number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
+  transition: all 0.3s ease;
 }
 
 .instructor-stat__label {
@@ -374,7 +375,7 @@
 .all-in-one-learning-card:hover {
   background-color: #ffe165;
   color: black;
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -542,6 +543,9 @@
   font-weight: 400;
 }
 
+.be-instructor-subscribe-content{
+  padding: 0 65px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -550,7 +554,7 @@
   }
 
   .be-instructor-subscribe-title {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
   }
 
   .be-instructor-subscribe-desc {
@@ -559,6 +563,14 @@
 
   .be-instructor-subscribe-btn {
     padding: 0.5rem 1.5rem;
+  }
+
+  .be-instructor-subscribe-content{
+    padding: 0px;
+  }
+
+  .be-instructor-subscribe-highlight img{
+    width: 100px;
   }
 }
 
@@ -713,7 +725,7 @@
 }
 
 .instructor-review-card:hover {
-  transform: translateY(-8px);
+  /* transform: translateY(-8px); */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -844,6 +856,19 @@
     .review-card-back {
         padding: 15px;
     }
+}
+
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active,
+.all-in-one-learning-swiper-pagination-bullet-active {
+    transition: all 0.3s ease!important;
+    border-radius: 9px!important;
+    width: 22px!important;
+    background: linear-gradient(180deg, #FBCF3A 0%, #FADC6C 100%)!important;
+}
+
+.swiper-backface-hidden .swiper-slide {
+  height: auto!important;
 }
 
 

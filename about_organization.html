@@ -268,12 +268,12 @@
                         <h4 class="mb-3">My Services</h4>
 
                         <div class="services-tabs">
-                            <button class="services-tab-btn active" data-tab="all">All</button>
-                            <button class="services-tab-btn" data-tab="free">Free Service</button>
-                            <button class="services-tab-btn" data-tab="course">Course</button>
-                            <button class="services-tab-btn" data-tab="priority">Priority Support</button>
-                            <button class="services-tab-btn" data-tab="urgent">Urgent Help</button>
-                            <button class="services-tab-btn" data-tab="digital">Digital Resources</button>
+                            <button class="services-tab-btn col-auto mb-2 active" data-tab="all">All</button>
+                            <button class="services-tab-btn col-auto mb-2" data-tab="free">Free Service</button>
+                            <button class="services-tab-btn col-auto mb-2" data-tab="course">Course</button>
+                            <button class="services-tab-btn col-auto mb-2" data-tab="priority">Priority Support</button>
+                            <button class="services-tab-btn col-auto mb-2" data-tab="urgent">Urgent Help</button>
+                            <button class="services-tab-btn col-auto mb-2" data-tab="digital">Digital Resources</button>
                         </div>
 
                         <div class="services-content active" id="all">
@@ -534,15 +534,10 @@
     <!-- -------------------- Organization Resources (last) --------------------- -->
     <div class="organization-resources-section">
         <div class="organization-resources-header">
-            <h2 class="text-center">Organization Resources</h2>
-            <div class="organization-tabs justify-content-center">
-                <button class="organization-tab-btn-resources active" data-tab="courses">Courses</button>
-                <button class="organization-tab-btn-resources" data-tab="instructors">Instructors</button>
-                <button class="organization-tab-btn-resources" data-tab="meetings">Reserve a Meeting</button>
-            </div>
+            <h2 class="text-center">My Courses</h2>
         </div>
         
-        <div class="organization-resources-content active" id="courses">
+        <div class="organization-resources-content" >
             <div class="container-fluid container-lg d-flex flex-wrap justify-content-center">
                 <!-- ----- card 1 ----- -->
                 <div class="col-12 col-md-5 col-lg-3">
@@ -610,12 +605,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="organization-resources-content" id="instructors">
-            instructors
-        </div>
-        <div class="organization-resources-content" id="meetings">
-            meetings
         </div>
     </div>
 
@@ -713,7 +702,6 @@
 
         const tabServicesButtons = document.querySelectorAll('.services-tab-btn');
         const tabReviewButtons = document.querySelectorAll('.services-tab-btn-review');
-        const tabResourcesButtons = document.querySelectorAll('.organization-tab-btn-resources');
 
         tabServicesButtons.forEach(button => {
             button.addEventListener('click', function () {
@@ -753,25 +741,6 @@
             });
         });
 
-        
-        tabResourcesButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Remove active class from all buttons
-                tabResourcesButtons.forEach(btn => btn.classList.remove('active'));
-
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                // Hide all content
-                document.querySelectorAll('.organization-resources-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-
-                // Show the corresponding content
-                const tabId = this.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
         // -------------------------- start rating -------------------
 
         const starContainers = document.querySelectorAll('.star-rating');

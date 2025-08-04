@@ -353,11 +353,29 @@ padding: 7px 14px;
 
 
 /* ---------- my servives -------------------- */
-.services-tabs,.organization-tabs {
+.services-tabs {
     display: flex;
     margin-bottom: 1.25rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 0.5rem;
+    overflow-x: scroll;
+}
+
+.services-tabs::-webkit-scrollbar,
+.services-tabs::-webkit-scrollbar {
+  height: 5px;
+}
+
+.services-tabs::-webkit-scrollbar-track,
+.services-tabs::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.services-tabs::-webkit-scrollbar-thumb,
+.services-tabs::-webkit-scrollbar-thumb {
+  background: #979696;
+  border-radius: 10px;
 }
 
 .services-tab-btn,.services-tab-btn-review ,.organization-tab-btn-resources{
@@ -380,11 +398,11 @@ padding: 7px 14px;
     background-color: #FACF39;
 }
 
-.services-content ,.organization-resources-content {
+.services-content {
     display: none;
 }
 
-.services-content.active,.organization-resources-content.active {
+.services-content.active {
     display: block;
 }
 
@@ -446,7 +464,7 @@ padding: 7px 14px;
     .services-tabs,.organization-tabs {
         justify-content: flex-start;
         padding-bottom: 0.5rem;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
 
     .services-tab-btn {

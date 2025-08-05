@@ -92,6 +92,22 @@
         <p class="text-center find-perfect-plan-subtitle">
             Choose the plan that best fits your learning goals.
         </p>
+
+        <div class="switch-wrapper">
+        
+            <!-- Month / Year Switch -->
+            <div class="choose-perfect-plan-month-year">
+                <button class="switch-btn active">Month</button>
+                <button class="switch-btn">Year</button>
+            </div>
+        
+            <!-- Instructor / Organization Switch -->
+            <div class="choose-perfect-plan-instructor-organization">
+                <button class="switch-btn active">Instructor</button>
+                <button class="switch-btn">Organization</button>
+            </div>
+        
+        </div>
     
         <div class="find-perfect-plan-options-container">
             <div class="row justify-content-center g-4">
@@ -374,12 +390,14 @@
     <div class="quick-comparison-container  py-5">
         <div class="row mb-5 align-items-center gap-3">
             <!-- Left Title -->
-            <div class="col-lg-3 mb-4 mb-lg-0">
-                <h2 class="quick-comparison-title ps-3">Quick <br/> <span>Comparison</span><br>of available <br/> plans.</h2>
+            <div class=" col-12 col-lg-3 mb-4 mb-lg-0">
+                <h2 class="quick-comparison-title ps-3">Quick <br class="d-none d-lg-block"/> 
+                    <span>Comparison</span><br class="d-none d-lg-block"/>of available <br/> plans.
+                </h2>
             </div>
     
             <!-- Right Cards -->
-            <div class="col-lg-8">
+            <div class="col-lg-8 d-none d-lg-block">
                 <div class="row g-3">
                     <!-- Starter Plan -->
                     <div class="col-md-4">
@@ -434,6 +452,14 @@
         <!-- Comparison Table -->
         <div class="table-responsive quick-comparison-table">
             <table class="table table-striped text-start ">
+                <thead class="d-lg-none">
+                    <tr>
+                        <th class="text-muted">Features</th>
+                        <th>Starter Plan</th>
+                        <th>Pro Plan</th>
+                        <th>Expert Plan</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <th>Number of courses</th>
@@ -464,6 +490,24 @@
                         <td><img src="./assets4/cross.svg" alt="cross"/></td>
                         <td><img src="./assets4/greenCheck.svg" alt="check"/></td>
                         <td><img src="./assets4/greenCheck.svg" alt="check"/></td>
+                    </tr>
+                    <tr class=" d-lg-none">
+                        <td></td>
+                        <td>
+                            <button class="btn quick-comparison-get-started-btn btn-sm mt-3">
+                                <div class="mb-1">Get Started </div>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn quick-comparison-get-started-btn btn-sm mt-3">
+                                <div class="mb-1">Get Started </div>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn quick-comparison-get-started-btn btn-sm mt-3">
+                                <div class="mb-1">Get Started </div>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -900,6 +944,19 @@
         }
 
         initWaveSurfer("audioWaveformReview", "audioPlayPauseBtnReview");
+
+
+        // ------------ perfect plan switches ---------------------------
+         const switchGroups = document.querySelectorAll('.choose-perfect-plan-month-year, .choose-perfect-plan-instructor-organization');
+            switchGroups.forEach(group => {
+                const buttons = group.querySelectorAll('.switch-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                });
+            });
     </script>
    
 

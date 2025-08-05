@@ -296,9 +296,42 @@
     font-weight: 400;
     font-family: "Rethink Sans";
     padding: 0!important;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+.switch-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #fff;
 }
 
+    .choose-perfect-plan-month-year,
+    .choose-perfect-plan-instructor-organization {
+      display: flex;
+      background-color: #237c3b;
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    .choose-perfect-plan-month-year .switch-btn,
+    .choose-perfect-plan-instructor-organization .switch-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 25px;
+      background-color: transparent;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .choose-perfect-plan-month-year .switch-btn.active,
+    .choose-perfect-plan-instructor-organization .switch-btn.active {
+      background-color: #fcd439;
+      color: black;
+      font-weight: 600;
+    }
 .find-perfect-plan-title span {
     color: #DAB123;
 }
@@ -649,9 +682,14 @@ transform: translateX(-50%);
     align-items: center;
     border-radius: 12px;
 }
-.quick-comparison-container .pro-card .subscribe-btn {
+.quick-comparison-container .pro-card .subscribe-btn,.quick-comparison-get-started-btn {
   background: #FACF39;
   color: #000;
+  box-shadow: none!important;
+}
+
+.quick-comparison-get-started-btn{
+  border-radius: 10px;
 }
 
 .quick-comparison-container .card .subscribe-btn:hover {
@@ -661,7 +699,7 @@ transform: translateX(-50%);
   transition: background 0.2s, color 0.2s;
 }
 
-.quick-comparison-container .pro-card .subscribe-btn:hover {
+.quick-comparison-container .pro-card .subscribe-btn:hover,.quick-comparison-get-started-btn:hover {
   background: #1F993E;
   color: white;
   box-shadow: 0 2px 8px rgba(101, 120, 105, 0.10);

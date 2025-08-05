@@ -123,6 +123,12 @@
     font-size: 30px;
     text-align: center;
 }
+@media screen and (max-width: 768px) {
+    .play-icon-swiper-video-overlay-content {
+        top: 73%;
+    }
+    
+}
 
 .play-icon-swiper-video-overlay{
     width: 40px;

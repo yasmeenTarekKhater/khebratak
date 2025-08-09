@@ -40,6 +40,12 @@
 
 }
 
+@media screen and (max-width: 768px) {
+    .product-details-media-container {
+        margin: 5rem 0px;
+    }
+    
+}
 
 .product-main-slider {
     height: 500px;
@@ -77,6 +83,14 @@
     overflow: hidden;
     opacity: 0.6;
     transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .product-thumbnail-slider .swiper-slide {
+        height: 60px;
+        margin: auto;
+    }
+    
 }
 
 .product-thumbnail-slider .swiper-slide:hover,

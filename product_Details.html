@@ -398,22 +398,9 @@
          // Initialize thumbnail slider
         const thumbnailSlider = new Swiper('.product-thumbnail-slider', {
             spaceBetween: 10,
-            slidesPerView: 5,
+            slidesPerView: 4,
             responsive:true,
-            breakpoints: {
-                1024: {
-                    slidesPerView: 5,
-                },
-                768: {
-                    slidesPerView: 4,
-                },
-                640: {
-                    slidesPerView: 3,
-                },
-                320: {
-                    slidesPerView: 1,
-                }
-            },
+            
 
             freeMode: true,
             watchSlidesProgress: true,

@@ -108,7 +108,7 @@
     .turn-expertise-income-image {
         text-align: center !important;
         position: relative !important;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .turn-expertise-income-image img {
@@ -274,7 +274,7 @@
 }
 @media screen and (max-width: 768px) {
     .find-perfect-plan-container {
-        margin: 140px 3vw 140px 3vw;
+        margin: 80px 3vw 140px 3vw;
     }
 }
 
@@ -557,9 +557,16 @@ padding: 12px 20px;
   border: 8px solid #FFF;
   position: absolute;
   left: 50%;
-  bottom: -25px;
-transform: translateX(-50%);
+  bottom: -36px;
+  transform: translateX(-50%);
 
+}
+@media screen and (max-width: 768px) {
+    .who-is-it-for-cards-container .who-card button {
+        width: 200px;
+    
+    }
+  
 }
 
 /* Hover Effect */
@@ -1196,8 +1203,8 @@ font-weight: 400;
 .feel-hesitant-right .contact-card {
   display: flex;
   align-items: center;
-    flex-wrap: wrap;
-
+  flex-wrap: wrap;
+  cursor: pointer;
   border-radius: 12px;
   padding: 16px 20px;
 }

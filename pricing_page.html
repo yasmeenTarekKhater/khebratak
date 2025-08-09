@@ -81,14 +81,21 @@
 
     <!-- ------------------  Find Your Perfect Plan -------------------- -->
     <div class="find-perfect-plan-container d-flex justify-content-center align-items-center flex-column">
+        <!-- Instructor / Organization Switch  ------------ (in small screens)---------- -->
+        <div class="choose-perfect-plan-instructor-organization mb-3 d-block d-lg-none">
+            <button class="switch-btn active">Instructor</button>
+            <button class="switch-btn">Organization</button>
+        </div>
+
         <h2 class="text-center text-dark mb-3 find-perfect-plan-title">
             Find Your
             <span class="become-inst-content-text-span d-inline-block justify-content-center align-items-center">
                 Perfect
-                <img src="./assets/yellow_line.svg" class="d-block mt-1" width="180" alt="arrow right icon">
+                <img src="./assets/yellow_line.svg" class="d-block mt-1" width="150" alt="arrow right icon">
             </span>
             Plan
         </h2>
+
         <p class="text-center find-perfect-plan-subtitle">
             Choose the plan that best fits your learning goals.
         </p>
@@ -101,19 +108,19 @@
                 <button class="switch-btn">Year</button>
             </div>
         
-            <!-- Instructor / Organization Switch -->
-            <div class="choose-perfect-plan-instructor-organization">
+            <!-- Instructor / Organization Switch  ------------ (in large screens)---------- -->   
+            <div class="choose-perfect-plan-instructor-organization d-none d-lg-block">
                 <button class="switch-btn active">Instructor</button>
                 <button class="switch-btn">Organization</button>
             </div>
         
         </div>
     
-        <div class="find-perfect-plan-options-container">
-            <div class="row justify-content-center g-4">
+        <div class="find-perfect-plan-options-container mx-3">
+            <div class="row justify-content-center g-5 g-md-4">
     
                 <!-- Starter Plan -->
-                <div class="col-11 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="plan-card starter-plan text-center">
                         <span class="plan-type-badge mb-3">Starter</span>
                         <p class="plan-description">
@@ -136,7 +143,7 @@
                 </div>
     
                 <!-- Pro Plan (Hover State) -->
-                <div class="col-11 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="plan-card pro-plan text-center active-plan">
                         <span class="plan-type-badge">Pro</span>
                         <p class="plan-description">
@@ -160,7 +167,7 @@
                 </div>
     
                 <!-- Expert Plan -->
-                <div class="col-11 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="plan-card expert-plan text-center">
                         <span class="plan-type-badge">Expert</span>
                         <p class="plan-description">
@@ -642,28 +649,26 @@
             Find answers to the most common questions to help you get started.
         </p>
 
-        <div class="row">
+        <!--------------- Questions list------------ -->
+        <div id="faqAccordion" class="row g-4">
             <!-- Left Column -->
             <div class="col-12 col-lg-6">
-                <!-- FAQ Item 1 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion1">
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 1 (open by default) -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                 How do I become an instructor on Khebratak?
                             </button>
                         </h2>
-                        <div id="faq1" class="accordion-collapse collapse">
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 To become an instructor, sign up and complete your instructor profile.
                             </div>
                         </div>
                     </div>
-                </div>
-        
-                <!-- FAQ Item 3 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion3">
+
+                    <!-- FAQ 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -671,7 +676,7 @@
                                 How do I earn as an instructor?
                             </button>
                         </h2>
-                        <div id="faq3" class="accordion-collapse collapse">
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 You earn when students enroll in your paid courses.
                             </div>
@@ -679,34 +684,32 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Right Column -->
             <div class="col-12 col-lg-6">
-                <!-- FAQ Item 2 (Opened by default) -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion2">
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 2 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2" aria-expanded="true">
+                                data-bs-target="#faq2">
                                 Do I Need Teaching Experience?
                             </button>
                         </h2>
-                        <div id="faq2" class="accordion-collapse collapse">
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                No, you don’t need teaching experience, just expertise in your subject area and a passion
-                                for sharing knowledge.
+                                No, you don’t need teaching experience, just expertise in your subject area and a passion for
+                                sharing knowledge.
                                 <div class="faq-video-button mt-3 d-flex align-items-center gap-2">
                                     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube icon"
-                                        style="width: 24px; height: 24px;" />
+                                        style="width:24px;height:24px;">
                                     <span>Watch Video</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        
-                <!-- FAQ Item 4 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion4">
+
+                    <!-- FAQ 4 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -714,7 +717,7 @@
                                 What tools are available for creating courses?
                             </button>
                         </h2>
-                        <div id="faq4" class="accordion-collapse collapse">
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 We offer video uploads, quizzes, PDFs, assignments, and more.
                             </div>
@@ -723,7 +726,7 @@
                 </div>
             </div>
         </div>
-    
+
     </div>
 
 
@@ -744,9 +747,9 @@
                 Try any plan for 30 days – if it’s not the right fit, you’ll get a full refund, no questions asked.
             </p>
         </div>
-        <div class="col-12 col-lg-6 turn-expertise-income-image mx-auto" style="align-self: center;">
+        <div class="col-12 col-lg-4 turn-expertise-income-image mx-auto" style="align-self: center;">
             <img src="./assets4/subscribe-with-no-risk-img.png" alt="subscribe with no risk image"
-                class="w-75 d-none d-lg-block mx-auto">
+                class="img-fluid d-block mx-auto">
         </div>
     </div>
 
@@ -770,22 +773,22 @@
         
     </div>
     <div class="col-12 col-xl-3 mt-4 mt-xl-0 feel-hesitant-right text-end">
-        <div class="contact-card email-card mb-3">
+        <div class="contact-card email-card mb-3" onclick="window.location.href='mailto:amaalkamal621@gmail.com'">
             <div class="contact-icon">
                 <img src="./assets4/Envelope.svg" alt="Email" />
             </div>
             <div class="contact-info">
-                <p class="contact-label">CHAT WITH ME</p>
+                <p class="contact-label">Send Email</p>
                 <p class="contact-text">amaalkamal621@gmail.com</p>
             </div>
         </div>
     
-        <div class="contact-card whatsapp-card">
+        <div class="contact-card whatsapp-card" onclick="window.open('https://wa.me/201140768141', '_blank')">
             <div class="contact-icon">
                 <img src="./assets4/ic_baseline-whatsapp.svg" alt="WhatsApp" />
             </div>
-            <div class="contact-info">
-                <p class="contact-label">CALL ME</p>
+            <div class="contact-info" >
+                <p class="contact-label">Call Or WhatsApp Chat</p>
                 <p class="contact-text text-white">+20 11 407 681 41</p>
             </div>
         </div>
@@ -947,7 +950,7 @@
 
 
         // ------------ perfect plan switches ---------------------------
-         const switchGroups = document.querySelectorAll('.choose-perfect-plan-month-year, .choose-perfect-plan-instructor-organization');
+        const switchGroups = document.querySelectorAll('.choose-perfect-plan-month-year, .choose-perfect-plan-instructor-organization');
             switchGroups.forEach(group => {
                 const buttons = group.querySelectorAll('.switch-btn');
                 buttons.forEach(btn => {
@@ -958,7 +961,6 @@
                 });
             });
     </script>
-   
 
 </body>
 </html>

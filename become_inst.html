@@ -335,11 +335,13 @@
             </p>
         </div>
 
-        <div class="row px-4">
+        <!-- Frequently Asked Questions -->
+        <div id="faqAccordion" class="row mx-4 g-4">
+        
             <!-- Left Column -->
             <div class="col-12 col-lg-6">
-                <!-- FAQ Item 1 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion1">
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -347,16 +349,16 @@
                                 How do I become an instructor on Khebratak?
                             </button>
                         </h2>
-                        <div id="faq1" class="accordion-collapse collapse">
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 To become an instructor, sign up and complete your instructor profile.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion3">
+        
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -364,7 +366,7 @@
                                 How do I earn as an instructor?
                             </button>
                         </h2>
-                        <div id="faq3" class="accordion-collapse collapse">
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 You earn when students enroll in your paid courses.
                             </div>
@@ -372,22 +374,22 @@
                     </div>
                 </div>
             </div>
-
+        
             <!-- Right Column -->
             <div class="col-12 col-lg-6">
-                <!-- FAQ Item 2 (Opened by default) -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion2">
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 2 (open by default) -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2" aria-expanded="true">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+                                aria-expanded="true">
                                 Do I Need Teaching Experience?
                             </button>
                         </h2>
-                        <div id="faq2" class="accordion-collapse collapse">
+                        <div id="faq2" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                No, you don’t need teaching experience, just expertise in your subject area and a passion
-                                for sharing knowledge.
+                                No, you don’t need teaching experience, just expertise in your subject area and a passion for
+                                sharing knowledge.
                                 <div class="faq-video-button mt-3 d-flex align-items-center gap-2">
                                     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube icon"
                                         style="width: 24px; height: 24px;" />
@@ -397,9 +399,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="accordion be-instructor-faq-section-accordion" id="faqAccordion4">
+        
+                <div class="accordion be-instructor-faq-section-accordion">
+                    <!-- FAQ 4 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -407,7 +409,7 @@
                                 What tools are available for creating courses?
                             </button>
                         </h2>
-                        <div id="faq4" class="accordion-collapse collapse">
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 We offer video uploads, quizzes, PDFs, assignments, and more.
                             </div>
@@ -415,7 +417,9 @@
                     </div>
                 </div>
             </div>
+        
         </div>
+
     </section>
 
     <!-- ----------------------- Subscribe Now ----------------- -->
